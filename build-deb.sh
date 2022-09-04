@@ -42,4 +42,4 @@ cd kiwix-tools
 dpkg-buildpackage -b -d -uc -us
 cd ..
 
-
+sudo dpkg -i kiwix-tools_*.deb

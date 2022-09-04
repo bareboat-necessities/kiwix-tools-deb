@@ -3,7 +3,7 @@
 sudo apt-get -y install meson cmake make git \
  dpkg-dev debhelper devscripts equivs pkg-config
 
-sudo apt-get install python3-pip virtualenv
+sudo apt-get -y install python3-pip virtualenv
 
 virtualenv -p python3 ./ # Create virtualenv
 source bin/activate      # Activate the virtualenv

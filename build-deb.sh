@@ -15,11 +15,12 @@ sudo apt-get -y install meson cmake make git \
 
 sudo apt-get -y install meson cmake make git \
  dpkg-dev debhelper devscripts equivs pkg-config \
- libpugixml-dev libmicrohttpd-dev libicu-dev libzim-dev libcurl4-openssl-dev zlib1g-dev aria2 
+ libpugixml-dev libmicrohttpd-dev libicu-dev libzim-dev libcurl4-openssl-dev zlib1g-dev aria2
 
 rm -rf libkiwix
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/
 cd libkiwix
+wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp
 dpkg-buildpackage -b -d -uc -us
 
 rm -rf kiwix-tools

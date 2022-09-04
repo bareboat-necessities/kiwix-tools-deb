@@ -22,6 +22,8 @@ rm -rf libzim
 git clone https://github.com/openzim/libzim
 cd libzim
 dpkg-buildpackage -b -d -uc -us
+sudo dpkg -i libzim7_*.deb libzim-dev_*.deb
+
 
 rm -rf libkiwix
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/

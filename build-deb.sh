@@ -21,7 +21,7 @@ rm -rf libkiwix
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/
 cd libkiwix
 cd include && wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp && cd ..
-sudo cp mustache.hpp /usr/include/
+sudo cp include/mustache.hpp /usr/include/
 dpkg-buildpackage -b -d -uc -us
 
 rm -rf kiwix-tools

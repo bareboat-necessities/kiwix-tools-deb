@@ -8,7 +8,7 @@ sudo apt-get -y install python3-pip virtualenv
 virtualenv -p python3 ./ # Create virtualenv
 source bin/activate      # Activate the virtualenv
 
-git clone https://github.com/kiwix/kiwix-build.git
+git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-build.git
 cd kiwix-build
 pip3 install .
 hash -r # Refresh bash paths

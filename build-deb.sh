@@ -20,6 +20,7 @@ sudo apt-get -y install meson cmake make git \
 sudo apt-get -y install  liblzma-dev libicu-dev libzstd-dev libxapian-dev
 rm -rf libzim
 git clone https://github.com/openzim/libzim
+cd libzim
 dpkg-buildpackage -b -d -uc -us
 
 rm -rf libkiwix

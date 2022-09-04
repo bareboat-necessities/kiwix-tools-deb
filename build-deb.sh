@@ -13,13 +13,17 @@ sudo apt-get -y install meson cmake make git \
 #pip3 install .
 #hash -r # Refresh bash paths
 
+sudo apt-get -y install meson cmake make git \
+ dpkg-dev debhelper devscripts equivs pkg-config \
+ libpugixml-dev
+
 rm -rf libkiwix
-git clone https://github.com/kiwix/libkiwix/
+git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/
 cd libkiwix
 dpkg-buildpackage -b -d -uc -us
 
 rm -rf kiwix-tools
-git clone https://github.com/kiwix/kiwix-tools/
+git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-tools/
 cd kiwix-tools
 dpkg-buildpackage -b -d -uc -us
 

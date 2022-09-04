@@ -20,7 +20,7 @@ sudo apt-get -y install meson cmake make git \
 rm -rf libkiwix
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/
 cd libkiwix
-wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp
+cd include && wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp && cd ..
 dpkg-buildpackage -b -d -uc -us
 
 rm -rf kiwix-tools

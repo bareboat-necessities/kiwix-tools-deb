@@ -33,6 +33,7 @@ cd include && wget https://raw.githubusercontent.com/kainjow/Mustache/master/mus
 sudo cp include/mustache.hpp /usr/include/
 dpkg-buildpackage -b -d -uc -us
 cd ..
+sudo dpkg -i libkiwix10_*.deb libkiwix-dev_*.deb
 
 rm -rf kiwix-tools
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-tools/

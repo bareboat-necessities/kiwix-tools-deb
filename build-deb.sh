@@ -15,9 +15,9 @@ sudo apt-get -y install meson cmake make git \
 
 sudo apt-get -y install meson cmake make git \
  dpkg-dev debhelper devscripts equivs pkg-config \
- libpugixml-dev libmicrohttpd-dev libicu-dev libzim-dev libcurl4-openssl-dev zlib1g-dev aria2
+ libpugixml-dev libmicrohttpd-dev libicu-dev libcurl4-openssl-dev zlib1g-dev aria2
 
-sudo apt-get -y install  liblzma-dev libicu-dev libzstd-dev libxapian-dev
+sudo apt-get -y install liblzma-dev libicu-dev libzstd-dev libxapian-dev
 rm -rf libzim
 git clone https://github.com/openzim/libzim
 cd libzim

@@ -22,6 +22,7 @@ rm -rf libzim
 git clone --recurse-submodules --remote-submodules https://github.com/openzim/libzim
 cd libzim
 dpkg-buildpackage -b -d -uc -us
+cd ..
 sudo dpkg -i libzim7_*.deb libzim-dev_*.deb
 
 
@@ -31,9 +32,12 @@ cd libkiwix
 cd include && wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp && cd ..
 sudo cp include/mustache.hpp /usr/include/
 dpkg-buildpackage -b -d -uc -us
+cd ..
 
 rm -rf kiwix-tools
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-tools/
 cd kiwix-tools
 dpkg-buildpackage -b -d -uc -us
+cd ..
+
 

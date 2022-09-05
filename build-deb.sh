@@ -41,5 +41,14 @@ git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwi
 cd kiwix-tools
 dpkg-buildpackage -b -d -uc -us
 cd ..
-
 sudo dpkg -i kiwix-tools_*.deb
+
+sudo apt-get install -y libqt5gui5 qtbase5-dev qtwebengine5-dev \
+     libqt5svg5-dev qt5-image-formats-plugins aria2 \
+     qttools5-dev-tools qtchooser qt5-qmake \
+     qtbase5-dev-tools
+rm -rf kiwix-desktop
+git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-desktop
+cd kiwix-desktop
+dpkg-buildpackage -b -d -uc -us
+cd ..

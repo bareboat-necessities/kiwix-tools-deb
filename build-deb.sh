@@ -50,8 +50,8 @@ sudo apt-get install -y libqt5gui5 qtbase5-dev qtwebengine5-dev \
      qttools5-dev-tools qtchooser qt5-qmake \
      qtbase5-dev-tools
 rm -rf kiwix-desktop
-sed -i 's/0.0.0/2.2.0.0/g' debian/changelog
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-desktop
 cd kiwix-desktop
+sed -i 's/0.0.0/2.2.0.0/g' debian/changelog
 dpkg-buildpackage -b -d -uc -us
 cd ..

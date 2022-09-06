@@ -30,6 +30,7 @@ sudo dpkg -i libzim7_*.deb libzim-dev_*.deb
 rm -rf libkiwix
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/libkiwix/
 cd libkiwix
+sed -i 's/0.0.0/10.1.1.0/g' debian/changelog
 cd include && wget https://raw.githubusercontent.com/kainjow/Mustache/master/mustache.hpp && cd ..
 sudo cp include/mustache.hpp /usr/include/
 dpkg-buildpackage -b -d -uc -us
@@ -39,6 +40,7 @@ sudo dpkg -i libkiwix10_*.deb libkiwix-dev_*.deb
 rm -rf kiwix-tools
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-tools/
 cd kiwix-tools
+sed -i 's/0.0.0/3.3.0.0/g' debian/changelog
 dpkg-buildpackage -b -d -uc -us
 cd ..
 sudo dpkg -i kiwix-tools_*.deb
@@ -48,6 +50,7 @@ sudo apt-get install -y libqt5gui5 qtbase5-dev qtwebengine5-dev \
      qttools5-dev-tools qtchooser qt5-qmake \
      qtbase5-dev-tools
 rm -rf kiwix-desktop
+sed -i 's/0.0.0/2.2.0.0/g' debian/changelog
 git clone --recurse-submodules --remote-submodules https://github.com/kiwix/kiwix-desktop
 cd kiwix-desktop
 dpkg-buildpackage -b -d -uc -us
